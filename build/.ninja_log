@@ -1,0 +1,7 @@
+# ninja log v7
+1	551	1786632729021940276	CMakeFiles/trdr_terminal.dir/tools/trdr_terminal.cpp.o	349b9c83e4a6a8e4
+4	431	1786632828801397260	CMakeFiles/trdr.dir/src/trdr_main.cpp.o	4815510168d1b320
+1	554	1786632729022262489	CMakeFiles/liquidity_bot.dir/tools/liquidity_bot.cpp.o	9904057d9d236c41
+4	56	1786632805132336144	tools/liquidity_bot	29589ef4bb8e0204
+4	57	1786632805132161932	tools/trdr_terminal	a7c7c5c8dae1702
+431	472	1786632829228172240	src/trdr	dc2e2138a7849c4d

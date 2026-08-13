@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build",
+  "command": "/usr/bin/c++ -I/Users/kiishidavid/Documents/Dev/Projects/trdr/src -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -fno-exceptions -o CMakeFiles/trdr.dir/src/trdr_main.cpp.o -c /Users/kiishidavid/Documents/Dev/Projects/trdr/src/trdr_main.cpp",
+  "file": "/Users/kiishidavid/Documents/Dev/Projects/trdr/src/trdr_main.cpp",
+  "output": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/trdr.dir/src/trdr_main.cpp.o"
+},
+{
+  "directory": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build",
+  "command": "/usr/bin/c++ -I/Users/kiishidavid/Documents/Dev/Projects/trdr/src -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -fno-exceptions -o CMakeFiles/trdr_terminal.dir/tools/trdr_terminal.cpp.o -c /Users/kiishidavid/Documents/Dev/Projects/trdr/tools/trdr_terminal.cpp",
+  "file": "/Users/kiishidavid/Documents/Dev/Projects/trdr/tools/trdr_terminal.cpp",
+  "output": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/trdr_terminal.dir/tools/trdr_terminal.cpp.o"
+},
+{
+  "directory": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build",
+  "command": "/usr/bin/c++ -I/Users/kiishidavid/Documents/Dev/Projects/trdr/src -O3 -DNDEBUG -std=c++20 -arch arm64 -Wall -Wextra -Wpedantic -fno-exceptions -o CMakeFiles/liquidity_bot.dir/tools/liquidity_bot.cpp.o -c /Users/kiishidavid/Documents/Dev/Projects/trdr/tools/liquidity_bot.cpp",
+  "file": "/Users/kiishidavid/Documents/Dev/Projects/trdr/tools/liquidity_bot.cpp",
+  "output": "/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/liquidity_bot.dir/tools/liquidity_bot.cpp.o"
+}
+]

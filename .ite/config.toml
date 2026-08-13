@@ -1,0 +1,13 @@
+# Workspace-level ITE config
+# Add overrides here (model, hooks, mcp servers, etc.)
+#
+# Hooks are disabled by default for fast/safe baseline behavior.
+hooks_enabled = false
+#
+# Token optimizations to reduce API cost (safe, leave on)
+[tool_optimizer]
+enabled = true
+compact_descriptions = true
+compact_read_output = true
+line_range_edit = true
+

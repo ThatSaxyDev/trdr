@@ -1,0 +1,5 @@
+/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/trdr.dir
+/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/trdr_terminal.dir
+/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/liquidity_bot.dir
+/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/edit_cache.dir
+/Users/kiishidavid/Documents/Dev/Projects/trdr/build/CMakeFiles/rebuild_cache.dir
