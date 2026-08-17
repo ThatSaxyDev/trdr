@@ -30,8 +30,10 @@ namespace trdr::core
             initializeFreeList();
         }
 
-        T* allocate() noexcept {
-            if (free_list_head_ == nullptr) [[unlikely]] {
+        T *allocate() noexcept
+        {
+            if (free_list_head_ == nullptr) [[unlikely]]
+            {
                 return nullptr; // Pool exhausted
             }
             FreeNode *node = free_list_head_;
@@ -40,11 +42,27 @@ namespace trdr::core
             return reinterpret_cast<T *>(node);
         }
 
-        MemoryPool(const MemoryPool &) = delete;
-        MemoryPool &operator=(const MemoryPool &) = delete;
-        MemoryPool(MemoryPool &&) = delete;
-        MemoryPool &operator=(MemoryPool &&) = delete;
-        
+        void deallocate(T *object) noexcept
+        {
+            if (object == nullptr) [[unlikely]]
+            {
+                return; // Ignore null pointer
+            }
+            std::destroy_at(object);
+            auto *node = reinterpret_cast<FreeNode *>(object);
+            node->next = free_list_head_;
+            free_list_head_ = node;
+            --allocated_count_ ;
+        }
+
+        // [[nodiscard]] constexpr std::size_t capacity() const noexcept { return N; }
+
+        // [[nodiscard]] bool empty() const noexcept { return free_list_head_ == nullptr; }
+
+        // MemoryPool(const MemoryPool &) = delete;
+        // MemoryPool &operator=(const MemoryPool &) = delete;
+        // MemoryPool(MemoryPool &&) = delete;
+        // MemoryPool &operator=(MemoryPool &&) = delete;
 
     private:
         void initializeFreeList() noexcept
@@ -52,7 +70,7 @@ namespace trdr::core
             free_list_head_ = nullptr;
             for (std::size_t i = 0; i < N; ++i)
             {
-                auto *node = reinterpret_cast<FreeNode *>( slots_[i].storage.data());
+                auto *node = reinterpret_cast<FreeNode *>(slots_[i].storage.data());
                 node->next = free_list_head_;
                 free_list_head_ = node;
             }
@@ -61,7 +79,7 @@ namespace trdr::core
         std::unique_ptr<Slot[]> slots_;
 
         FreeNode *free_list_head_{nullptr};
-        
+
         std::size_t allocated_count_{0};
     };
 
