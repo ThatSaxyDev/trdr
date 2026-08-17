@@ -35,4 +35,6 @@ namespace trdr::matching
     static_assert(sizeof(Order) <= 128,
                   "Order should stay compact enough for cache-friendly access");
 
+    static_assert(std::is_standard_layout_v<Order>);
+
 }
