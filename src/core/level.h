@@ -54,6 +54,19 @@ namespace trdr::matching
 
             total_qty -= order->display_qty;
             --order_count;
+
+            order->prev = nullptr;
+            order->next = nullptr;
+            order->parent_level = nullptr;
+        }
+
+        [[nodiscard]] Order *front() const noexcept
+        {
+            return head;
+        }
+        [[nodiscard]] bool is_empty() const noexcept
+        {
+            return head == nullptr;
         }
     };
 }
